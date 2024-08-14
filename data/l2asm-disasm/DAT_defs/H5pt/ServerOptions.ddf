@@ -1,0 +1,20 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+MAGIC = 0;
+
+{
+	UINT server_id;
+	UCHAR use_classic_list;
+	UCHAR disable_gracia_map;
+	UCHAR disable_attribute;
+	UCHAR disable_kamael;
+	UCHAR disable_vitality;
+	UCHAR disable_cursed_weapons;
+	UCHAR disable_fortress;
+	UCHAR disable_territory_war;
+	UCHAR disable_navit;
+}

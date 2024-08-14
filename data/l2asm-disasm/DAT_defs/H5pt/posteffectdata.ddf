@@ -1,0 +1,23 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT effect_id;
+	UNICODE effect_name;
+	UINT effect_sort;
+	UINT effect_play_type;
+	FLOAT play_time;
+	UINT effect_fix;
+	FLOAT effect_cor1_factor1;
+	FLOAT effect_cor1_factor2;
+	FLOAT effect_cor1_factor3;
+	FLOAT effect_cor2_factor1;
+	FLOAT effect_cor2_factor2;
+	FLOAT effect_cor2_factor3;
+	UINT effect_reservefactor1;
+	UINT effect_reservefactor2;
+}

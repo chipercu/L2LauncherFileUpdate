@@ -1,0 +1,29 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+MAGIC = 0;
+
+{
+	UINT NpcId;
+	UINT Level;
+	UINT Hp;
+	UINT Mp;
+	UINT Exp;
+	UINT Sp;
+	UINT PAtk;
+	UINT PDef;
+	UINT MAtk;
+	UINT MDef;
+	UINT HuntingZoneId;
+	FLOAT Scale;
+	INT OffsetX;
+	INT OffsetY;
+	INT CameraDist;
+	INT CameraPitch;
+	INT CameraYaw;
+	INT RotationRate;
+	INT SkillID;
+}

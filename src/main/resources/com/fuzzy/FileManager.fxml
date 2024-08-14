@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="MAIN_ANCHOR_PANE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fuzzy.fx_controllers.FileManagerController">
+   <children>
+      <ListView fx:id="FILES_LIST" layoutX="371.0" layoutY="25.0" prefHeight="417.0" prefWidth="385.0" />
+      <ScrollPane fx:id="FOLDER_SCROLL_PANE" layoutX="14.0" layoutY="24.0" prefHeight="419.0" prefWidth="217.0">
+         <content>
+            <ListView fx:id="FOLDER_LIST" prefHeight="417.0" prefWidth="215.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="FILE_FILTER" layoutX="371.0" layoutY="460.0" prefHeight="25.0" prefWidth="289.0" promptText="filter" />
+      <ProgressBar fx:id="PROGRESS_BAR" layoutX="8.0" layoutY="568.0" prefHeight="18.0" prefWidth="785.0" progress="0.0" visible="false" />
+      <Label fx:id="PROGRESS_LABLE" layoutX="23.0" layoutY="551.0" prefHeight="17.0" prefWidth="769.0" />
+   </children>
+</AnchorPane>
