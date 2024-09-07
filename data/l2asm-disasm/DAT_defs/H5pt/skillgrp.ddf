@@ -1,0 +1,31 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT skill_id;
+	UINT skill_level;
+	UINT icon_type;
+	UINT operate_type;
+	INT mp_consume;
+	INT cast_range;
+	UINT cast_style;
+	FLOAT hit_time;
+	INT is_magic;
+	UNICODE ani_char;
+	UNICODE desc;
+	UNICODE icon_name;
+	UNICODE icon_name2;
+	UINT is_debuff;
+	UINT Enchanted;
+	UINT EnchantSkillLevel;
+	ASCF nonetext1;
+	INT hp_consume;
+	INT rumble_self;
+	INT rumble_target;
+	INT UNK_1;
+	ASCF nonetext2;
+}

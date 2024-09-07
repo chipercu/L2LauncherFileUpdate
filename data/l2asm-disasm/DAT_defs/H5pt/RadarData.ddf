@@ -1,0 +1,16 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT zone_id;
+	INT zone_x;
+	INT zone_y;
+	FLOAT zoom;
+	INT map_x;
+	INT map_y;
+	ASCF map_tex;
+}

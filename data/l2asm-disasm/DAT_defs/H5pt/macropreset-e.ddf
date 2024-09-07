@@ -1,0 +1,27 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT ID;
+	ASCF Name;
+	ASCF IconName;
+	ASCF IconTextureName;
+	ASCF Description;
+	ASCF PresetDescription;
+	ASCF Command0;
+	ASCF Command1;
+	ASCF Command2;
+	ASCF Command3;
+	ASCF Command4;
+	ASCF Command5;
+	ASCF Command6;
+	ASCF Command7;
+	ASCF Command8;
+	ASCF Command9;
+	ASCF Command10;
+	ASCF Command11;
+}

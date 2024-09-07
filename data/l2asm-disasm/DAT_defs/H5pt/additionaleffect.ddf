@@ -1,0 +1,157 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT item_id;
+	ASCF effect;
+	UNICODE bone;
+	UINT use_params;
+	
+	UNICODE mfighter_bone;
+	FLOAT mfighter_loc_x;
+	FLOAT mfighter_loc_y;
+	FLOAT mfighter_loc_z;
+	INT mfighter_rot_p;
+	INT mfighter_rot_y;
+	INT mfighter_rot_r;
+	FLOAT mfighter_scale;
+	
+	UNICODE ffighter_bone;
+	FLOAT ffighter_loc_x;
+	FLOAT ffighter_loc_y;
+	FLOAT ffighter_loc_z;
+	INT ffighter_rot_p;
+	INT ffighter_rot_y;
+	INT ffighter_rot_r;
+	FLOAT ffighter_scale;
+	
+	UNICODE mdarkelf_bone;
+	FLOAT mdarkelf_loc_x;
+	FLOAT mdarkelf_loc_y;
+	FLOAT mdarkelf_loc_z;
+	INT mdarkelf_rot_p;
+	INT mdarkelf_rot_y;
+	INT mdarkelf_rot_r;
+	FLOAT mdarkelf_scale;
+	
+	UNICODE fdarkelf_bone;
+	FLOAT fdarkelf_loc_x;
+	FLOAT fdarkelf_loc_y;
+	FLOAT fdarkelf_loc_z;
+	INT fdarkelf_rot_p;
+	INT fdarkelf_rot_y;
+	INT fdarkelf_rot_r;
+	FLOAT fdarkelf_scale;
+	
+	UNICODE mdwarf_bone;
+	FLOAT mdwarf_loc_x;
+	FLOAT mdwarf_loc_y;
+	FLOAT mdwarf_loc_z;
+	INT mdwarf_rot_p;
+	INT mdwarf_rot_y;
+	INT mdwarf_rot_r;
+	FLOAT mdwarf_scale;
+	
+	UNICODE fdwarf_bone;
+	FLOAT fdwarf_loc_x;
+	FLOAT fdwarf_loc_y;
+	FLOAT fdwarf_loc_z;
+	INT fdwarf_rot_p;
+	INT fdwarf_rot_y;
+	INT fdwarf_rot_r;
+	FLOAT fdwarf_scale;
+	
+	UNICODE melf_bone;
+	FLOAT melf_loc_x;
+	FLOAT melf_loc_y;
+	FLOAT melf_loc_z;
+	INT melf_rot_p;
+	INT melf_rot_y;
+	INT melf_rot_r;
+	FLOAT melf_scale;
+	
+	UNICODE felf_bone;
+	FLOAT felf_loc_x;
+	FLOAT felf_loc_y;
+	FLOAT felf_loc_z;
+	INT felf_rot_p;
+	INT felf_rot_y;
+	INT felf_rot_r;
+	FLOAT felf_scale;
+	
+	UNICODE mmagic_bone;
+	FLOAT mmagic_loc_x;
+	FLOAT mmagic_loc_y;
+	FLOAT mmagic_loc_z;
+	INT mmagic_rot_p;
+	INT mmagic_rot_y;
+	INT mmagic_rot_r;
+	FLOAT mmagic_scale;
+	
+	UNICODE fmagic_bone;
+	FLOAT fmagic_loc_x;
+	FLOAT fmagic_loc_y;
+	FLOAT fmagic_loc_z;
+	INT fmagic_rot_p;
+	INT fmagic_rot_y;
+	INT fmagic_rot_r;
+	FLOAT fmagic_scale;
+	
+	UNICODE morc_bone;
+	FLOAT morc_loc_x;
+	FLOAT morc_loc_y;
+	FLOAT morc_loc_z;
+	INT morc_rot_p;
+	INT morc_rot_y;
+	INT morc_rot_r;
+	FLOAT morc_scale;
+	
+	UNICODE forc_bone;
+	FLOAT forc_loc_x;
+	FLOAT forc_loc_y;
+	FLOAT forc_loc_z;
+	INT forc_rot_p;
+	INT forc_rot_y;
+	INT forc_rot_r;
+	FLOAT forc_scale;
+	
+	UNICODE mshaman_bone;
+	FLOAT mshaman_loc_x;
+	FLOAT mshaman_loc_y;
+	FLOAT mshaman_loc_z;
+	INT mshaman_rot_p;
+	INT mshaman_rot_y;
+	INT mshaman_rot_r;
+	FLOAT mshaman_scale;
+	
+	UNICODE fshaman_bone;
+	FLOAT fshaman_loc_x;
+	FLOAT fshaman_loc_y;
+	FLOAT fshaman_loc_z;
+	INT fshaman_rot_p;
+	INT fshaman_rot_y;
+	INT fshaman_rot_r;
+	FLOAT fshaman_scale;
+	
+	UNICODE mkamael_bone;
+	FLOAT mkamael_loc_x;
+	FLOAT mkamael_loc_y;
+	FLOAT mkamael_loc_z;
+	INT mkamael_rot_p;
+	INT mkamael_rot_y;
+	INT mkamael_rot_r;
+	FLOAT mkamael_scale;
+	
+	UNICODE fkamael_bone;
+	FLOAT fkamael_loc_x;
+	FLOAT fkamael_loc_y;
+	FLOAT fkamael_loc_z;
+	INT fkamael_rot_p;
+	INT fkamael_rot_y;
+	INT fkamael_rot_r;
+	FLOAT fkamael_scale;
+}
