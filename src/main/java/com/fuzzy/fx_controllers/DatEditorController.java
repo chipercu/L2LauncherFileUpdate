@@ -14,7 +14,7 @@ public class DatEditorController {
     private ListView<Label> ALL_ELEMENTS_VIEWER;
 
     @FXML
-    private ListView<Label> ELEMENT_DATA_VIEWER;
+    private ListView<AnchorPane> ELEMENT_DATA_VIEWER;
 
     @FXML
     private TextField ID_FILTER;
@@ -33,7 +33,7 @@ public class DatEditorController {
         return ALL_ELEMENTS_VIEWER;
     }
 
-    public ListView<Label> getELEMENT_DATA_VIEWER() {
+    public ListView<AnchorPane> getELEMENT_DATA_VIEWER() {
         return ELEMENT_DATA_VIEWER;
     }
 

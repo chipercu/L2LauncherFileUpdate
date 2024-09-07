@@ -1,5 +1,7 @@
 package com.fuzzy.utils;
 
+import com.fuzzy.model.Project;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -237,5 +239,9 @@ public final class FileUtils {
             return fileName.substring(lastIndexOfDot + 1); // Возвращаем расширение
         }
         return ""; // Если расширение не найдено
+    }
+
+    public static String relativePath(Project project, File file){
+        return file.getAbsolutePath().replace(project.getPath() + File.separator, "");
     }
 }

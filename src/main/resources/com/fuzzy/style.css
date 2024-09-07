@@ -1,0 +1,122 @@
+.tooltip {
+    -fx-background-color: #333;
+    -fx-background-radius: 0;
+    -fx-text-fill: #d2a119;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-translate-y: 5;
+}
+
+.patch-file-viewer{
+    -fx-layout-x: 300;
+    -fx-layout-y: 115;
+    -fx-opacity: 0.91;
+    -fx-pref-width: 285;
+    -fx-pref-height: 417;
+    -fx-alignment: center;
+}
+
+
+.patch-file-pane {
+    -fx-alignment: center-left;
+}
+.patch-file-pane-box {
+    -fx-alignment: center-left;
+    -fx-spacing: 5;
+}
+
+.patch-file-icon {
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-alignment: center;
+    -fx-max-height: 24;
+    -fx-max-width: 24;
+    -fx-pref-height: 24;
+    -fx-pref-width: 24;
+    -fx-opacity: 0.8;
+}
+.patch-file-icon_unk {
+    -fx-background-image: url('background/file_icon/file_unk_icon.png');
+}
+
+.patch-file-icon-utx {
+    -fx-background-image: url('background/file_icon/utx.png');
+}
+.patch-file-icon-dll {
+    -fx-background-image: url('background/file_icon/dll.png');
+}
+.patch-file-icon-ogg {
+    -fx-background-image: url('background/file_icon/ogg.png');
+}
+.patch-file-icon-uax {
+    -fx-background-image: url('background/file_icon/uax.png');
+}
+.patch-file-icon-unr {
+    -fx-background-image: url('background/file_icon/unr.png');
+}
+
+.patch-file-icon-ini {
+    -fx-background-image: url('background/file_icon/ini.png');
+}
+
+.patch-file-icon-int {
+    -fx-background-image: url('background/file_icon/int.png');
+}
+.patch-file-icon-u {
+    -fx-background-image: url('background/file_icon/u.png');
+}
+.patch-file-icon-dat {
+    -fx-background-image: url('background/file_icon/dat.png');
+}
+.patch-file-icon-bin {
+    -fx-background-image: url('background/file_icon/bin.png');
+}
+.patch-file-icon-html {
+    -fx-background-image: url('background/file_icon/html.png');
+}
+.patch-file-icon-htm {
+    -fx-background-image: url('background/file_icon/htm.png');
+}
+
+.patch-file-icon:hover {
+    -fx-opacity: 1;
+}
+
+.patch-file-patch-button, .patch-file-lock-button-unlock, .patch-file-lock-button-lock{
+    -fx-pref-height: 26;
+    -fx-pref-width: 26;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent; /* Убирает фоновый цвет */
+    -fx-border-color: transparent;     /* Убирает цвет рамки */
+    -fx-padding: 0;                    /* Убирает внутренние отступы (опционально) */
+    -fx-alignment: center;
+}
+
+.patch-file-lock-button-unlock {
+    -fx-background-image: url("background/unlock_button.png");
+}
+
+.patch-file-lock-button-lock {
+    -fx-background-image: url("background/lock_button.png");
+}
+
+.patch-file-patch-button {
+    -fx-background-image: url("background/patch_excludet.png");
+}
+
+.patch-file-patch-button:include {
+    -fx-background-image: url('background/patch_includet.png');
+}
+
+/*.patch-file-patch-button:hover, .patch-file-lock-button:hover{*/
+/*    -fx-pref-height: 27;*/
+/*    -fx-pref-width: 27;*/
+/*}*/
+
+
+.patch-file-label {
+    -fx-text-fill: #042780;
+    -fx-font-size: 14;
+}

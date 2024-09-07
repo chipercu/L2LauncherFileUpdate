@@ -18,8 +18,13 @@ module com.fuzzy {
     requires java.logging;
     requires commons.lang3;
     requires com.opencsv;
+    requires org.eclipse.jgit;
+    requires org.eclipse.jgit.ssh.apache;
+    requires org.apache.sshd.osgi;
+    requires org.pcap4j.core;
+    requires atlantafx.base;
 
-
+    opens com.fuzzy.model to jackson.databind;
     opens com.fuzzy to javafx.fxml;
     opens com.fuzzy.clientmod.l2smr to javafx.graphics, javafx.fxml;
     opens com.fuzzy.clientmod.l2tool to javafx.graphics, javafx.fxml;
