@@ -29,7 +29,7 @@ public class UpdateFolderTreeTask extends Task<Void> {
         int progress = 0;
         updateProgress(progress, count);
         for (File child : files) {
-            if (child.getName().equalsIgnoreCase(".git")){
+            if (child.getName().equalsIgnoreCase(".git") || child.getName().equalsIgnoreCase(".idea")){
                 continue;
             }
             if (child.isDirectory()) {

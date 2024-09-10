@@ -4,6 +4,7 @@ import com.fuzzy.model.Project;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,6 +19,8 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 import java.util.Collection;
 import java.util.stream.Stream;
@@ -243,5 +246,36 @@ public final class FileUtils {
 
     public static String relativePath(Project project, File file){
         return file.getAbsolutePath().replace(project.getPath() + File.separator, "");
+    }
+
+    public static String getMd5Hash(byte[] bytes) {
+        MessageDigest md;
+        try {
+            md = MessageDigest.getInstance("SHA-1");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+
+        String digestHex = HexConverter.bytesToHex(md.digest(bytes));
+        return digestHex.toUpperCase();
+    }
+
+    public static String getSHA(File file) {
+        return getMd5Hash(getByteFile(file));
+    }
+
+    public static byte[] getByteFile(File file) {
+        byte[] fileBytes = new byte[0];
+        try (InputStream inputStream = new FileInputStream(file); ByteArrayOutputStream byteOutput = new ByteArrayOutputStream()) {
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                byteOutput.write(buffer, 0, bytesRead);
+            }
+            fileBytes = byteOutput.toByteArray();
+        } catch (IOException e) {
+            System.out.println("Ошибка при чтении файла в массив байтов: " + e.getMessage());
+        }
+        return fileBytes;
     }
 }

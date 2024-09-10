@@ -1,12 +1,14 @@
 package com.fuzzy.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class ClientFiles {
     private List<String> clientFileList = new ArrayList<>();
-    private List<String> blockedFiles = new ArrayList<>();
+    private Map<String, String> blockedFiles = new HashMap<>();
 
 
     public List<String> getClientFileList() {
@@ -17,11 +19,11 @@ public class ClientFiles {
         this.clientFileList = clientFileList;
     }
 
-    public List<String> getBlockedFiles() {
+    public Map<String, String> getBlockedFiles() {
         return blockedFiles;
     }
 
-    public void setBlockedFiles(List<String> blockedFiles) {
+    public void setBlockedFiles(Map<String, String> blockedFiles) {
         this.blockedFiles = blockedFiles;
     }
 }

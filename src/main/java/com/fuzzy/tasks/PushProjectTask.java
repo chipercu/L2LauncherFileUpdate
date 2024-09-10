@@ -23,6 +23,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -39,7 +40,6 @@ public class PushProjectTask extends Task<Void> {
     @Override
     protected Void call() throws Exception {
         try (Git git = Git.open(new File(project.getPath()))) {
-
             Status status = git.status().call();
             List<String> commitList = new ArrayList<>();
             commitList.addAll(status.getAdded());
@@ -61,6 +61,7 @@ public class PushProjectTask extends Task<Void> {
             try (Stream<Path> paths = Files.walk(Paths.get(project.getPath()))) {
                 clientFileList = paths
                         .filter(path -> !path.toString().contains(".git")) // Исключаем папку
+                        .filter(path -> !path.toString().contains(".idea")) // Исключаем папку
                         .filter(Files::isRegularFile) // фильтруем только файлы
                         .map(Path::toFile)
                         .map(file -> FileUtils.relativePath(project, file))
@@ -75,7 +76,15 @@ public class PushProjectTask extends Task<Void> {
             File file = new File(project.getPath() + File.separator + project.getName() + ".json");
             ClientFiles clientFiles = new ClientFiles();
             clientFiles.setClientFileList(clientFileList);
-            clientFiles.setBlockedFiles(project.getBlockedFiles());
+
+
+            HashMap<String, String> blockedFilesMap = new HashMap<>();
+            project.getBlockedFiles().forEach(blockedFile -> {
+                String sha = FileUtils.getSHA(new File(project.getPath() + File.separator + blockedFile));
+                blockedFilesMap.put(blockedFile, sha);
+            });
+
+            clientFiles.setBlockedFiles(blockedFilesMap);
             try {
                 new ObjectMapper().writeValue(file, clientFiles);
             } catch (IOException e) {
@@ -104,15 +113,7 @@ public class PushProjectTask extends Task<Void> {
             }catch (Exception e){
                 System.out.println(e.getMessage());
             }
-
             updateProgress(5, 5);
-            Platform.runLater(() ->
-                    FXUtil.showSuccessDialog(
-                            "Push проекта",
-                            "Изменения успешно отправлены!")
-            );
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -123,6 +124,10 @@ public class PushProjectTask extends Task<Void> {
 
     @Override
     protected void succeeded() {
+        Platform.runLater(() ->
+                        FXUtil.showSuccessDialog(
+                                "Push проекта",
+                                "Изменения успешно отправлены!"));
         updateProgress(0, 0);
         Platform.runLater(() -> controller.getPROGRESS_BAR().progressProperty().unbind());
     }
