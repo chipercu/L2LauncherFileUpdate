@@ -31,11 +31,6 @@ public class GitService {
         try (Git git = Git.open(new File(project.getPath()))) {
             String canonicalPath = file.getPath().replace("\\", "/");
 
-            double fileSizeInMB = file.length() / (1024.0 * 1024.0);
-            if (fileSizeInMB > 99.9){
-                Runtime.getRuntime().exec("git lfs track " + canonicalPath);
-            }
-
             git.add()
                     .addFilepattern(canonicalPath) // Указание файла для добавления
                     .call();
