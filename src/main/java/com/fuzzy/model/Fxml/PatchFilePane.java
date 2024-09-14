@@ -37,11 +37,11 @@ public class PatchFilePane extends AnchorPane {
         getStyleClass().add("patch-file-pane");
         HBox pane = new HBox();
         pane.getStyleClass().add("patch-file-pane-box");
-        long fileSizeInBytes = file.length();
-        double fileSizeInMB = fileSizeInBytes / (1024.0 * 1024.0);
-        if (fileSizeInMB < 99.9){
-            pane.getChildren().add(buildLockButton());
-        }
+//        long fileSizeInBytes = file.length();
+//        double fileSizeInMB = fileSizeInBytes / (1024.0 * 1024.0);
+//        if (fileSizeInMB < 99.9){
+        pane.getChildren().add(buildLockButton());
+//        }
         pane.getChildren().addAll(buildIcon(), buildLabel());
         getChildren().add(pane);
     }
@@ -131,12 +131,12 @@ public class PatchFilePane extends AnchorPane {
             case untracked -> {
                 MenuItem addToGit = new MenuItem("Добавить файл в Git");
                 addToGit.setOnAction(actionEvent -> {
-                    long fileSizeInBytes = file.length();
-                    double fileSizeInMB = fileSizeInBytes / (1024.0 * 1024.0);
-                    if (fileSizeInMB > 99.9){
-                        Platform.runLater(() -> FXUtil.showErrorDialog("Git", "Нельзя добавлять в git файлы более 100мб"));
-                        return;
-                    }
+//                    long fileSizeInBytes = file.length();
+//                    double fileSizeInMB = fileSizeInBytes / (1024.0 * 1024.0);
+//                    if (fileSizeInMB > 99.9){
+//                        Platform.runLater(() -> FXUtil.showErrorDialog("Git", "Нельзя добавлять в git файлы более 100мб"));
+//                        return;
+//                    }
                     GitService.addFile(project, new File(file.getAbsolutePath().replace(controller.getProject().getPath() + File.separator, "")));
                     controller.updateFilesListViewer();
                 });
